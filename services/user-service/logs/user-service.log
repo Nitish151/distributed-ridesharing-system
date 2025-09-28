@@ -7547,3 +7547,668 @@ Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violate
 	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:194)
 	... 171 common frames omitted
 2025-09-28 20:47:43.012 [http-nio-8081-exec-7] DEBUG [com.rideshare.user.config.JwtFilter] - Request processed successfully - Method: POST, URI: /api/auth/register, Duration: 175ms, Status: 409
+2025-09-28 20:49:21.945 [main] INFO  [com.rideshare.user.UserServiceApplication] - Starting UserServiceApplication using Java 21 with PID 1960 (E:\Projects\Distributed Ride Sharing System\distributed-rideshare\services\user-service\build\classes\java\main started by nitis in E:\Projects\Distributed Ride Sharing System\distributed-rideshare\services\user-service)
+2025-09-28 20:49:21.946 [main] DEBUG [com.rideshare.user.UserServiceApplication] - Running with Spring Boot v3.5.6, Spring v6.2.11
+2025-09-28 20:49:21.947 [main] INFO  [com.rideshare.user.UserServiceApplication] - No active profile set, falling back to 1 default profile: "default"
+2025-09-28 20:49:22.914 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-28 20:49:22.980 [main] INFO  [o.s.d.r.config.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
+2025-09-28 20:49:23.855 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat initialized with port 8081 (http)
+2025-09-28 20:49:23.874 [main] INFO  [org.apache.catalina.core.StandardService] - Starting service [Tomcat]
+2025-09-28 20:49:23.875 [main] INFO  [org.apache.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-28 20:49:23.952 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
+2025-09-28 20:49:23.953 [main] INFO  [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1958 ms
+2025-09-28 20:49:24.104 [main] DEBUG [com.rideshare.user.config.JwtFilter] - Filter 'jwtFilter' configured for use
+2025-09-28 20:49:24.271 [main] INFO  [org.hibernate.jpa.internal.util.LogHelper] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-28 20:49:24.398 [main] INFO  [org.hibernate.Version] - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-09-28 20:49:24.465 [main] INFO  [o.hibernate.cache.internal.RegionFactoryInitiator] - HHH000026: Second-level cache disabled
+2025-09-28 20:49:24.858 [main] INFO  [o.s.o.j.persistenceunit.SpringPersistenceUnitInfo] - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-28 20:49:24.897 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Starting...
+2025-09-28 20:49:25.115 [main] INFO  [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@295f2d1b
+2025-09-28 20:49:25.117 [main] INFO  [com.zaxxer.hikari.HikariDataSource] - HikariPool-1 - Start completed.
+2025-09-28 20:49:25.236 [main] INFO  [org.hibernate.orm.connections.pooling] - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-28 20:49:26.323 [main] INFO  [o.h.e.t.jta.platform.internal.JtaPlatformInitiator] - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-28 20:49:26.415 [main] INFO  [o.s.orm.jpa.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-28 20:49:26.661 [main] INFO  [o.s.data.jpa.repository.query.QueryEnhancerFactory] - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-28 20:49:27.219 [main] INFO  [com.rideshare.user.config.SecurityConfig] - Creating BCrypt password encoder
+2025-09-28 20:49:27.329 [main] INFO  [com.rideshare.user.config.SecurityConfig] - Creating DAO authentication provider
+2025-09-28 20:49:27.335 [main] DEBUG [com.rideshare.user.config.SecurityConfig] - DAO authentication provider configured with custom user details service and BCrypt encoder
+2025-09-28 20:49:27.336 [main] INFO  [o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer] - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-09-28 20:49:27.337 [main] WARN  [o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer] - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-09-28 20:49:27.403 [main] INFO  [com.rideshare.user.config.SecurityConfig] - Configuring security filter chain
+2025-09-28 20:49:27.404 [main] DEBUG [com.rideshare.user.config.SecurityConfig] - Disabling CSRF protection
+2025-09-28 20:49:27.411 [main] DEBUG [com.rideshare.user.config.SecurityConfig] - Configuring authorization rules - Permitting /api/auth/** endpoints
+2025-09-28 20:49:27.629 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] - Exposing 1 endpoint beneath base path '/actuator'
+2025-09-28 20:49:27.650 [main] DEBUG [com.rideshare.user.config.SecurityConfig] - Configuring stateless session management
+2025-09-28 20:49:27.650 [main] INFO  [com.rideshare.user.config.SecurityConfig] - Security filter chain configured successfully
+2025-09-28 20:49:27.676 [main] DEBUG [o.s.security.web.DefaultSecurityFilterChain] - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-09-28 20:49:27.677 [main] INFO  [com.rideshare.user.config.SecurityConfig] - Creating authentication manager
+2025-09-28 20:49:27.705 [main] INFO  [o.s.v.beanvalidation.OptionalValidatorFactoryBean] - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-09-28 20:49:28.108 [main] INFO  [org.apache.kafka.clients.admin.AdminClientConfig] - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = user-service-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-09-28 20:49:28.285 [main] INFO  [org.apache.kafka.common.utils.AppInfoParser] - Kafka version: 3.9.1
+2025-09-28 20:49:28.286 [main] INFO  [org.apache.kafka.common.utils.AppInfoParser] - Kafka commitId: f745dfdcee2b9851
+2025-09-28 20:49:28.286 [main] INFO  [org.apache.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1759092568284
+2025-09-28 20:49:28.921 [kafka-admin-client-thread | user-service-admin-0] INFO  [org.apache.kafka.common.utils.AppInfoParser] - App info kafka.admin.client for user-service-admin-0 unregistered
+2025-09-28 20:49:28.926 [kafka-admin-client-thread | user-service-admin-0] INFO  [org.apache.kafka.common.metrics.Metrics] - Metrics scheduler closed
+2025-09-28 20:49:28.926 [kafka-admin-client-thread | user-service-admin-0] INFO  [org.apache.kafka.common.metrics.Metrics] - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-09-28 20:49:28.927 [kafka-admin-client-thread | user-service-admin-0] INFO  [org.apache.kafka.common.metrics.Metrics] - Metrics reporters closed
+2025-09-28 20:49:28.944 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] - Tomcat started on port 8081 (http) with context path '/'
+2025-09-28 20:49:28.957 [main] INFO  [com.rideshare.user.UserServiceApplication] - Started UserServiceApplication in 7.574 seconds (process running for 8.0)
+2025-09-28 20:49:28.966 [main] INFO  [com.rideshare.user.UserServiceApplication] - ==========================================
+2025-09-28 20:49:28.966 [main] INFO  [com.rideshare.user.UserServiceApplication] -  User Service Application Started Successfully
+2025-09-28 20:49:28.966 [main] INFO  [com.rideshare.user.UserServiceApplication] -  Server running on port: 8081
+2025-09-28 20:49:28.966 [main] INFO  [com.rideshare.user.UserServiceApplication] -  Context path: /
+2025-09-28 20:49:28.967 [main] INFO  [com.rideshare.user.UserServiceApplication] -  Active profiles: default
+2025-09-28 20:49:28.967 [main] INFO  [com.rideshare.user.UserServiceApplication] -  Database URL: jdbc:postgresql://localhost:5432/rideshare_userdb
+2025-09-28 20:49:28.967 [main] INFO  [com.rideshare.user.UserServiceApplication] -  API Base URL: http://localhost:8081/api/auth
+2025-09-28 20:49:28.967 [main] INFO  [com.rideshare.user.UserServiceApplication] - ==========================================
+2025-09-28 20:49:50.878 [http-nio-8081-exec-2] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-28 20:49:50.879 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Initializing Servlet 'dispatcherServlet'
+2025-09-28 20:49:50.881 [http-nio-8081-exec-2] INFO  [org.springframework.web.servlet.DispatcherServlet] - Completed initialization in 2 ms
+2025-09-28 20:49:50.913 [http-nio-8081-exec-2] DEBUG [org.springframework.security.web.FilterChainProxy] - Securing POST /api/auth/register
+2025-09-28 20:49:50.928 [http-nio-8081-exec-2] DEBUG [com.rideshare.user.config.JwtFilter] - Processing request - Method: POST, URI: /api/auth/register
+2025-09-28 20:49:50.929 [http-nio-8081-exec-2] DEBUG [com.rideshare.user.config.JwtFilter] - No authorization header or invalid format - URI: /api/auth/register
+2025-09-28 20:49:50.933 [http-nio-8081-exec-2] DEBUG [o.s.s.w.a.AnonymousAuthenticationFilter] - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-28 20:49:50.942 [http-nio-8081-exec-2] DEBUG [org.springframework.security.web.FilterChainProxy] - Secured POST /api/auth/register
+2025-09-28 20:49:51.088 [http-nio-8081-exec-2] INFO  [com.rideshare.user.controller.UserController] - [d4c34047-dfb0-4e6f-8b06-5c5626d51992] Registration request started - Email: abc@gmail.com, IP: 0:0:0:0:0:0:0:1
+2025-09-28 20:49:51.088 [http-nio-8081-exec-2] INFO  [com.rideshare.user.service.UserService] - Starting user registration process - Email: abc@gmail.com, Name: Nitish Sharma
+2025-09-28 20:49:51.278 [http-nio-8081-exec-2] DEBUG [org.hibernate.SQL] - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.deleted,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.wallet_balance 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+        and u1_0.deleted=false
+2025-09-28 20:49:51.521 [http-nio-8081-exec-2] DEBUG [org.hibernate.SQL] - 
+    insert 
+    into
+        users
+        (created_at, deleted, deleted_at, email, name, password_hash, phone, role, updated_at, wallet_balance, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28 20:49:51.539 [http-nio-8081-exec-2] INFO  [com.rideshare.events.util.EventPublisher] - Publishing event: USER_CREATED to topic: user-events
+2025-09-28 20:49:51.588 [http-nio-8081-exec-2] INFO  [org.apache.kafka.clients.producer.ProducerConfig] - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = user-service-producer-1
+	compression.gzip.level = -1
+	compression.lz4.level = 9
+	compression.type = snappy
+	compression.zstd.level = 3
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2025-09-28 20:49:51.652 [http-nio-8081-exec-2] INFO  [o.a.k.c.telemetry.internals.KafkaMetricsCollector] - initializing Kafka metrics collector
+2025-09-28 20:49:51.685 [http-nio-8081-exec-2] INFO  [org.apache.kafka.clients.producer.KafkaProducer] - [Producer clientId=user-service-producer-1] Instantiated an idempotent producer.
+2025-09-28 20:49:51.725 [http-nio-8081-exec-2] INFO  [org.apache.kafka.common.utils.AppInfoParser] - Kafka version: 3.9.1
+2025-09-28 20:49:51.726 [http-nio-8081-exec-2] INFO  [org.apache.kafka.common.utils.AppInfoParser] - Kafka commitId: f745dfdcee2b9851
+2025-09-28 20:49:51.726 [http-nio-8081-exec-2] INFO  [org.apache.kafka.common.utils.AppInfoParser] - Kafka startTimeMs: 1759092591725
+2025-09-28 20:49:51.751 [kafka-producer-network-thread | user-service-producer-1] INFO  [org.apache.kafka.clients.Metadata] - [Producer clientId=user-service-producer-1] Cluster ID: 8NInHFIDSkq6uOCAhnmn2w
+2025-09-28 20:49:51.753 [kafka-producer-network-thread | user-service-producer-1] INFO  [o.a.k.c.producer.internals.TransactionManager] - [Producer clientId=user-service-producer-1] ProducerId set to 2 with epoch 0
+2025-09-28 20:49:52.044 [http-nio-8081-exec-2] INFO  [com.rideshare.user.service.UserService] - User registration completed successfully - UserId: 3127b1a0-132b-4c20-b180-71e074706eef, Email: abc@gmail.com, Duration: 956ms
+2025-09-28 20:49:52.045 [http-nio-8081-exec-2] INFO  [com.rideshare.user.controller.UserController] - [d4c34047-dfb0-4e6f-8b06-5c5626d51992] User registration successful - UserId: 3127b1a0-132b-4c20-b180-71e074706eef, Email: abc@gmail.com
+2025-09-28 20:49:52.092 [kafka-producer-network-thread | user-service-producer-1] INFO  [com.rideshare.user.service.UserEventPublisher] - UserCreatedEvent published for user: 3127b1a0-132b-4c20-b180-71e074706eef
+2025-09-28 20:49:52.092 [kafka-producer-network-thread | user-service-producer-1] INFO  [com.rideshare.events.util.EventPublisher] - Successfully published event USER_CREATED to topic user-events with offset 4
+2025-09-28 20:49:52.093 [http-nio-8081-exec-2] DEBUG [com.rideshare.user.config.JwtFilter] - Request processed successfully - Method: POST, URI: /api/auth/register, Duration: 1165ms, Status: 200
+2025-09-28 20:50:29.695 [http-nio-8081-exec-3] DEBUG [org.springframework.security.web.FilterChainProxy] - Securing POST /api/auth/login
+2025-09-28 20:50:29.697 [http-nio-8081-exec-3] DEBUG [com.rideshare.user.config.JwtFilter] - Processing request - Method: POST, URI: /api/auth/login
+2025-09-28 20:50:29.697 [http-nio-8081-exec-3] DEBUG [com.rideshare.user.config.JwtFilter] - No authorization header or invalid format - URI: /api/auth/login
+2025-09-28 20:50:29.697 [http-nio-8081-exec-3] DEBUG [o.s.s.w.a.AnonymousAuthenticationFilter] - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-28 20:50:29.699 [http-nio-8081-exec-3] DEBUG [org.springframework.security.web.FilterChainProxy] - Secured POST /api/auth/login
+2025-09-28 20:50:29.700 [http-nio-8081-exec-3] INFO  [com.rideshare.user.controller.UserController] - [94dcc186-09a7-4f21-a4d7-07a52df5fb9e] Login request started - Email: abc@gmail.com, IP: 0:0:0:0:0:0:0:1
+2025-09-28 20:50:29.702 [http-nio-8081-exec-3] INFO  [com.rideshare.user.service.UserService] - Starting user login process - Email: abc@gmail.com
+2025-09-28 20:50:29.703 [http-nio-8081-exec-3] DEBUG [org.hibernate.SQL] - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.deleted,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.wallet_balance 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+        and u1_0.deleted=false
+2025-09-28 20:50:29.834 [http-nio-8081-exec-3] DEBUG [com.rideshare.user.config.JwtUtil] - Generating JWT token - UserId: 3127b1a0-132b-4c20-b180-71e074706eef, Role: USER
+2025-09-28 20:50:29.874 [http-nio-8081-exec-3] DEBUG [com.rideshare.user.config.JwtUtil] - JWT token generated successfully - UserId: 3127b1a0-132b-4c20-b180-71e074706eef, Duration: 40ms
+2025-09-28 20:50:29.875 [http-nio-8081-exec-3] INFO  [com.rideshare.user.service.UserService] - User login completed successfully - UserId: 3127b1a0-132b-4c20-b180-71e074706eef, Email: abc@gmail.com, Role: USER, Duration: 173ms
+2025-09-28 20:50:29.875 [http-nio-8081-exec-3] INFO  [com.rideshare.user.controller.UserController] - [94dcc186-09a7-4f21-a4d7-07a52df5fb9e] User login successful - Email: abc@gmail.com, UserId: 3127b1a0-132b-4c20-b180-71e074706eef, Role: USER
+2025-09-28 20:50:29.879 [http-nio-8081-exec-3] DEBUG [com.rideshare.user.config.JwtFilter] - Request processed successfully - Method: POST, URI: /api/auth/login, Duration: 182ms, Status: 200
+2025-09-28 20:50:43.136 [http-nio-8081-exec-4] DEBUG [org.springframework.security.web.FilterChainProxy] - Securing DELETE /api/users/3127b1a0-132b-4c20-b180-71e074706eef
+2025-09-28 20:50:43.137 [http-nio-8081-exec-4] DEBUG [com.rideshare.user.config.JwtFilter] - Processing request - Method: DELETE, URI: /api/users/3127b1a0-132b-4c20-b180-71e074706eef
+2025-09-28 20:50:43.137 [http-nio-8081-exec-4] DEBUG [com.rideshare.user.config.JwtFilter] - Authorization header found - URI: /api/users/3127b1a0-132b-4c20-b180-71e074706eef
+2025-09-28 20:50:43.137 [http-nio-8081-exec-4] DEBUG [com.rideshare.user.config.JwtUtil] - Validating JWT token
+2025-09-28 20:50:43.185 [http-nio-8081-exec-4] DEBUG [com.rideshare.user.config.JwtUtil] - JWT token validation successful - Subject: 3127b1a0-132b-4c20-b180-71e074706eef, Role: USER, Duration: 48ms
+2025-09-28 20:50:43.186 [http-nio-8081-exec-4] DEBUG [com.rideshare.user.config.JwtFilter] - JWT token validated successfully - URI: /api/users/3127b1a0-132b-4c20-b180-71e074706eef, UserId: 3127b1a0-132b-4c20-b180-71e074706eef, Role: USER
+2025-09-28 20:50:43.186 [http-nio-8081-exec-4] DEBUG [com.rideshare.user.config.JwtFilter] - Spring Security context set for user - UserId: 3127b1a0-132b-4c20-b180-71e074706eef, Role: ROLE_USER
+2025-09-28 20:50:43.188 [http-nio-8081-exec-4] DEBUG [org.springframework.security.web.FilterChainProxy] - Secured DELETE /api/users/3127b1a0-132b-4c20-b180-71e074706eef
+2025-09-28 20:50:43.196 [http-nio-8081-exec-4] INFO  [com.rideshare.user.controller.UserController] - [b0182535-5113-4d50-878e-5f991095042b] Delete user request - TargetUserId: 3127b1a0-132b-4c20-b180-71e074706eef, RequestingUserId: 3127b1a0-132b-4c20-b180-71e074706eef, IP: 0:0:0:0:0:0:0:1
+2025-09-28 20:50:43.196 [http-nio-8081-exec-4] INFO  [com.rideshare.user.service.UserService] - Deleting user - UserId: 3127b1a0-132b-4c20-b180-71e074706eef, RequestedBy: 3127b1a0-132b-4c20-b180-71e074706eef
+2025-09-28 20:50:43.200 [http-nio-8081-exec-4] DEBUG [org.hibernate.SQL] - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.deleted,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.wallet_balance 
+    from
+        users u1_0 
+    where
+        u1_0.id=? 
+        and u1_0.deleted=false
+2025-09-28 20:50:43.208 [http-nio-8081-exec-4] DEBUG [org.hibernate.SQL] - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.deleted,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.wallet_balance 
+    from
+        users u1_0 
+    where
+        u1_0.id=? 
+        and u1_0.deleted=false
+2025-09-28 20:50:43.227 [http-nio-8081-exec-4] DEBUG [org.hibernate.SQL] - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.deleted,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.wallet_balance 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+2025-09-28 20:50:43.240 [http-nio-8081-exec-4] DEBUG [org.hibernate.SQL] - 
+    update
+        users 
+    set
+        deleted=?,
+        deleted_at=?,
+        email=?,
+        name=?,
+        password_hash=?,
+        phone=?,
+        role=?,
+        updated_at=?,
+        wallet_balance=? 
+    where
+        id=?
+2025-09-28 20:50:43.253 [http-nio-8081-exec-4] INFO  [com.rideshare.events.util.EventPublisher] - Publishing event: USER_DELETED to topic: user-events
+2025-09-28 20:50:43.258 [http-nio-8081-exec-4] INFO  [com.rideshare.user.service.UserService] - User soft deleted successfully - UserId: 3127b1a0-132b-4c20-b180-71e074706eef, RequestedBy: 3127b1a0-132b-4c20-b180-71e074706eef, Duration: 62ms
+2025-09-28 20:50:43.259 [http-nio-8081-exec-4] INFO  [com.rideshare.user.controller.UserController] - [b0182535-5113-4d50-878e-5f991095042b] User deleted successfully - TargetUserId: 3127b1a0-132b-4c20-b180-71e074706eef, RequestingUserId: 3127b1a0-132b-4c20-b180-71e074706eef, IP: 0:0:0:0:0:0:0:1
+2025-09-28 20:50:43.265 [http-nio-8081-exec-4] DEBUG [com.rideshare.user.config.JwtFilter] - Request processed successfully - Method: DELETE, URI: /api/users/3127b1a0-132b-4c20-b180-71e074706eef, Duration: 128ms, Status: 200
+2025-09-28 20:50:43.273 [kafka-producer-network-thread | user-service-producer-1] INFO  [com.rideshare.user.service.UserEventPublisher] - UserDeletedEvent published for user: 3127b1a0-132b-4c20-b180-71e074706eef
+2025-09-28 20:50:43.273 [kafka-producer-network-thread | user-service-producer-1] INFO  [com.rideshare.events.util.EventPublisher] - Successfully published event USER_DELETED to topic user-events with offset 3
+2025-09-28 20:51:00.970 [http-nio-8081-exec-5] DEBUG [org.springframework.security.web.FilterChainProxy] - Securing POST /api/auth/login
+2025-09-28 20:51:00.971 [http-nio-8081-exec-5] DEBUG [com.rideshare.user.config.JwtFilter] - Processing request - Method: POST, URI: /api/auth/login
+2025-09-28 20:51:00.972 [http-nio-8081-exec-5] DEBUG [com.rideshare.user.config.JwtFilter] - No authorization header or invalid format - URI: /api/auth/login
+2025-09-28 20:51:00.972 [http-nio-8081-exec-5] DEBUG [o.s.s.w.a.AnonymousAuthenticationFilter] - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-28 20:51:00.973 [http-nio-8081-exec-5] DEBUG [org.springframework.security.web.FilterChainProxy] - Secured POST /api/auth/login
+2025-09-28 20:51:00.974 [http-nio-8081-exec-5] INFO  [com.rideshare.user.controller.UserController] - [f400a67d-8e97-4418-94e1-d41723f2a382] Login request started - Email: abc@gmail.com, IP: 0:0:0:0:0:0:0:1
+2025-09-28 20:51:00.974 [http-nio-8081-exec-5] INFO  [com.rideshare.user.service.UserService] - Starting user login process - Email: abc@gmail.com
+2025-09-28 20:51:00.975 [http-nio-8081-exec-5] DEBUG [org.hibernate.SQL] - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.deleted,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.wallet_balance 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+        and u1_0.deleted=false
+2025-09-28 20:51:00.981 [http-nio-8081-exec-5] WARN  [com.rideshare.user.service.UserService] - Login attempt failed - User not found: abc@gmail.com
+2025-09-28 20:51:00.982 [http-nio-8081-exec-5] ERROR [com.rideshare.user.service.UserService] - User login failed - Email: abc@gmail.com, Duration: 8ms, Error: User not found
+2025-09-28 20:51:00.982 [http-nio-8081-exec-5] WARN  [com.rideshare.user.controller.UserController] - [f400a67d-8e97-4418-94e1-d41723f2a382] User login failed - Email: abc@gmail.com, Error: User not found
+2025-09-28 20:51:00.986 [http-nio-8081-exec-5] ERROR [c.rideshare.user.exception.GlobalExceptionHandler] - [3805e19c-011e-446a-a61e-f5ef393dcdf4] Runtime exception occurred - URI: uri=/api/auth/login, Error: User not found
+java.lang.RuntimeException: User not found
+	at com.rideshare.user.service.UserService.lambda$login$1(UserService.java:83)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.rideshare.user.service.UserService.login(UserService.java:81)
+	at com.rideshare.user.controller.UserController.login(UserController.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:490)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:351)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:83)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:129)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at com.rideshare.user.config.JwtFilter.doFilterInternal(JwtFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:334)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:225)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-09-28 20:51:01.001 [http-nio-8081-exec-5] DEBUG [com.rideshare.user.config.JwtFilter] - Request processed successfully - Method: POST, URI: /api/auth/login, Duration: 30ms, Status: 400
+2025-09-28 20:51:10.663 [http-nio-8081-exec-7] DEBUG [org.springframework.security.web.FilterChainProxy] - Securing POST /api/auth/register
+2025-09-28 20:51:10.664 [http-nio-8081-exec-7] DEBUG [com.rideshare.user.config.JwtFilter] - Processing request - Method: POST, URI: /api/auth/register
+2025-09-28 20:51:10.664 [http-nio-8081-exec-7] DEBUG [com.rideshare.user.config.JwtFilter] - No authorization header or invalid format - URI: /api/auth/register
+2025-09-28 20:51:10.665 [http-nio-8081-exec-7] DEBUG [o.s.s.w.a.AnonymousAuthenticationFilter] - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-28 20:51:10.665 [http-nio-8081-exec-7] DEBUG [org.springframework.security.web.FilterChainProxy] - Secured POST /api/auth/register
+2025-09-28 20:51:10.666 [http-nio-8081-exec-7] INFO  [com.rideshare.user.controller.UserController] - [ebf33c3f-387f-4781-8953-29d34823687e] Registration request started - Email: abc@gmail.com, IP: 0:0:0:0:0:0:0:1
+2025-09-28 20:51:10.667 [http-nio-8081-exec-7] INFO  [com.rideshare.user.service.UserService] - Starting user registration process - Email: abc@gmail.com, Name: Nitish Sharma
+2025-09-28 20:51:10.669 [http-nio-8081-exec-7] DEBUG [org.hibernate.SQL] - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.deleted,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.wallet_balance 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+        and u1_0.deleted=false
+2025-09-28 20:51:10.796 [http-nio-8081-exec-7] DEBUG [org.hibernate.SQL] - 
+    insert 
+    into
+        users
+        (created_at, deleted, deleted_at, email, name, password_hash, phone, role, updated_at, wallet_balance, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-09-28 20:51:10.813 [http-nio-8081-exec-7] INFO  [com.rideshare.events.util.EventPublisher] - Publishing event: USER_CREATED to topic: user-events
+2025-09-28 20:51:10.815 [http-nio-8081-exec-7] INFO  [com.rideshare.user.service.UserService] - User registration completed successfully - UserId: 5702b11f-ffb7-44ea-89d8-37b1e7df5012, Email: abc@gmail.com, Duration: 148ms
+2025-09-28 20:51:10.815 [http-nio-8081-exec-7] INFO  [com.rideshare.user.controller.UserController] - [ebf33c3f-387f-4781-8953-29d34823687e] User registration successful - UserId: 5702b11f-ffb7-44ea-89d8-37b1e7df5012, Email: abc@gmail.com
+2025-09-28 20:51:10.817 [http-nio-8081-exec-7] DEBUG [com.rideshare.user.config.JwtFilter] - Request processed successfully - Method: POST, URI: /api/auth/register, Duration: 153ms, Status: 200
+2025-09-28 20:51:10.831 [kafka-producer-network-thread | user-service-producer-1] INFO  [com.rideshare.user.service.UserEventPublisher] - UserCreatedEvent published for user: 5702b11f-ffb7-44ea-89d8-37b1e7df5012
+2025-09-28 20:51:10.831 [kafka-producer-network-thread | user-service-producer-1] INFO  [com.rideshare.events.util.EventPublisher] - Successfully published event USER_CREATED to topic user-events with offset 1
+2025-09-28 20:51:55.012 [http-nio-8081-exec-8] DEBUG [org.springframework.security.web.FilterChainProxy] - Securing POST /api/auth/login
+2025-09-28 20:51:55.013 [http-nio-8081-exec-8] DEBUG [com.rideshare.user.config.JwtFilter] - Processing request - Method: POST, URI: /api/auth/login
+2025-09-28 20:51:55.013 [http-nio-8081-exec-8] DEBUG [com.rideshare.user.config.JwtFilter] - No authorization header or invalid format - URI: /api/auth/login
+2025-09-28 20:51:55.013 [http-nio-8081-exec-8] DEBUG [o.s.s.w.a.AnonymousAuthenticationFilter] - Set SecurityContextHolder to anonymous SecurityContext
+2025-09-28 20:51:55.014 [http-nio-8081-exec-8] DEBUG [org.springframework.security.web.FilterChainProxy] - Secured POST /api/auth/login
+2025-09-28 20:51:55.016 [http-nio-8081-exec-8] INFO  [com.rideshare.user.controller.UserController] - [cea41338-5171-4bd7-9d28-dd013f3f41f5] Login request started - Email: abc@gmail.com, IP: 0:0:0:0:0:0:0:1
+2025-09-28 20:51:55.016 [http-nio-8081-exec-8] INFO  [com.rideshare.user.service.UserService] - Starting user login process - Email: abc@gmail.com
+2025-09-28 20:51:55.017 [http-nio-8081-exec-8] DEBUG [org.hibernate.SQL] - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.deleted,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.wallet_balance 
+    from
+        users u1_0 
+    where
+        u1_0.email=? 
+        and u1_0.deleted=false
+2025-09-28 20:51:55.146 [http-nio-8081-exec-8] DEBUG [com.rideshare.user.config.JwtUtil] - Generating JWT token - UserId: 5702b11f-ffb7-44ea-89d8-37b1e7df5012, Role: USER
+2025-09-28 20:51:55.147 [http-nio-8081-exec-8] DEBUG [com.rideshare.user.config.JwtUtil] - JWT token generated successfully - UserId: 5702b11f-ffb7-44ea-89d8-37b1e7df5012, Duration: 1ms
+2025-09-28 20:51:55.147 [http-nio-8081-exec-8] INFO  [com.rideshare.user.service.UserService] - User login completed successfully - UserId: 5702b11f-ffb7-44ea-89d8-37b1e7df5012, Email: abc@gmail.com, Role: USER, Duration: 131ms
+2025-09-28 20:51:55.147 [http-nio-8081-exec-8] INFO  [com.rideshare.user.controller.UserController] - [cea41338-5171-4bd7-9d28-dd013f3f41f5] User login successful - Email: abc@gmail.com, UserId: 5702b11f-ffb7-44ea-89d8-37b1e7df5012, Role: USER
+2025-09-28 20:51:55.150 [http-nio-8081-exec-8] DEBUG [com.rideshare.user.config.JwtFilter] - Request processed successfully - Method: POST, URI: /api/auth/login, Duration: 137ms, Status: 200
+2025-09-28 20:52:09.670 [http-nio-8081-exec-9] DEBUG [org.springframework.security.web.FilterChainProxy] - Securing GET /api/users/profile
+2025-09-28 20:52:09.672 [http-nio-8081-exec-9] DEBUG [com.rideshare.user.config.JwtFilter] - Processing request - Method: GET, URI: /api/users/profile
+2025-09-28 20:52:09.673 [http-nio-8081-exec-9] DEBUG [com.rideshare.user.config.JwtFilter] - Authorization header found - URI: /api/users/profile
+2025-09-28 20:52:09.673 [http-nio-8081-exec-9] DEBUG [com.rideshare.user.config.JwtUtil] - Validating JWT token
+2025-09-28 20:52:09.676 [http-nio-8081-exec-9] DEBUG [com.rideshare.user.config.JwtUtil] - JWT token validation successful - Subject: 5702b11f-ffb7-44ea-89d8-37b1e7df5012, Role: USER, Duration: 3ms
+2025-09-28 20:52:09.677 [http-nio-8081-exec-9] DEBUG [com.rideshare.user.config.JwtFilter] - JWT token validated successfully - URI: /api/users/profile, UserId: 5702b11f-ffb7-44ea-89d8-37b1e7df5012, Role: USER
+2025-09-28 20:52:09.678 [http-nio-8081-exec-9] DEBUG [com.rideshare.user.config.JwtFilter] - Spring Security context set for user - UserId: 5702b11f-ffb7-44ea-89d8-37b1e7df5012, Role: ROLE_USER
+2025-09-28 20:52:09.678 [http-nio-8081-exec-9] DEBUG [org.springframework.security.web.FilterChainProxy] - Secured GET /api/users/profile
+2025-09-28 20:52:09.679 [http-nio-8081-exec-9] INFO  [com.rideshare.user.controller.UserController] - [740c57e4-431e-4c07-aabc-c1d9f4e6bcee] Get user profile request - UserId: 5702b11f-ffb7-44ea-89d8-37b1e7df5012, IP: 0:0:0:0:0:0:0:1
+2025-09-28 20:52:09.679 [http-nio-8081-exec-9] INFO  [com.rideshare.user.service.UserService] - Getting user profile - UserId: 5702b11f-ffb7-44ea-89d8-37b1e7df5012
+2025-09-28 20:52:09.681 [http-nio-8081-exec-9] DEBUG [org.hibernate.SQL] - 
+    select
+        u1_0.id,
+        u1_0.created_at,
+        u1_0.deleted,
+        u1_0.deleted_at,
+        u1_0.email,
+        u1_0.name,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.wallet_balance 
+    from
+        users u1_0 
+    where
+        u1_0.id=? 
+        and u1_0.deleted=false
+2025-09-28 20:52:09.687 [http-nio-8081-exec-9] INFO  [com.rideshare.user.service.UserService] - User profile retrieved successfully - UserId: 5702b11f-ffb7-44ea-89d8-37b1e7df5012, Duration: 8ms
+2025-09-28 20:52:09.688 [http-nio-8081-exec-9] INFO  [com.rideshare.user.controller.UserController] - [740c57e4-431e-4c07-aabc-c1d9f4e6bcee] User profile retrieved successfully - UserId: 5702b11f-ffb7-44ea-89d8-37b1e7df5012, IP: 0:0:0:0:0:0:0:1
+2025-09-28 20:52:09.693 [http-nio-8081-exec-9] DEBUG [com.rideshare.user.config.JwtFilter] - Request processed successfully - Method: GET, URI: /api/users/profile, Duration: 21ms, Status: 200
