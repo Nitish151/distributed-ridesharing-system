@@ -1,0 +1,54 @@
+plugins {
+    id 'java-library'
+    id 'org.springframework.boot' version '3.5.6'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.rideshare'
+version = '0.0.1-SNAPSHOT'
+description = 'Shared Event Contracts for Ride Sharing System'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+// Configure this as a library, not a bootable jar
+jar {
+    enabled = true
+    archiveClassifier = ''
+}
+
+bootJar {
+    enabled = false
+}
+
+dependencies {
+    // Spring Framework core (includes logging)
+    api 'org.springframework:spring-context'
+    
+    // Spring Kafka for serialization annotations
+    api 'org.springframework.kafka:spring-kafka'
+    
+    // Jackson for JSON serialization
+    api 'com.fasterxml.jackson.core:jackson-databind'
+    api 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+    
+    // Lombok for cleaner code
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    
+    // Logging
+    api 'org.slf4j:slf4j-api'
+    
+    // Validation
+    api 'jakarta.validation:jakarta.validation-api'
+    
+    // Testing
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}

@@ -1,0 +1,50 @@
+# Test User Management Endpoints
+
+### 1. Register a new user
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "+1234567890",
+    "password": "password123",
+    "role": "RIDER"
+}
+
+### 2. Login
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "john.doe@example.com",
+    "password": "password123"
+}
+
+### 3. Get User Profile (requires authentication)
+GET http://localhost:8080/api/users/profile
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+
+### 4. Update User Profile (requires authentication)
+PUT http://localhost:8080/api/users/profile
+Content-Type: application/json
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+
+{
+    "name": "John Smith",
+    "phone": "+1987654321"
+}
+
+### 5. Change Password (requires authentication)
+PUT http://localhost:8080/api/users/change-password
+Content-Type: application/json
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
+
+{
+    "currentPassword": "password123",
+    "newPassword": "newpassword456"
+}
+
+### 6. Delete User (requires authentication)
+DELETE http://localhost:8080/api/users/USER_ID_HERE
+Authorization: Bearer YOUR_JWT_TOKEN_HERE
